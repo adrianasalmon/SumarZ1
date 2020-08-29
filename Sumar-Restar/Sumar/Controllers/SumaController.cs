@@ -12,14 +12,28 @@ namespace Sumar.Controllers
     public class SumaController : ControllerBase
     {
         [HttpGet]
+        [Route("Add")]
         public int Add(int a, int b)
         {
             return a + b;
         }
         [HttpPost]
+        [Route("Add")]
         public int Add2([FromHeader] int a, [FromHeader] int b)
         {
             return a + b;
+        }
+        [HttpGet]
+        [Route("Multiply")]
+        public int Add3(int a, int b)
+        {
+            return a * b;
+        }
+        [HttpPost]
+        [Route("Multiply")]
+        public int Add4(int a, int b)
+        {
+            return a * b;
         }
     }
 }
